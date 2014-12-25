@@ -6,3 +6,4 @@ before_install:
   - npm install -g mocha
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-helloworld' ]; then cd .. && eval "mv $currentfolder generator-helloworld" && cd generator-helloworld; fi
+  
