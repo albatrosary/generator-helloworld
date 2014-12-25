@@ -2,8 +2,8 @@ language: node_js
 node_js:
   - '0.10'
 before_install:
-  - npm install
-  - npm install -g mocha
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-helloworld' ]; then cd .. && eval "mv $currentfolder generator-helloworld" && cd generator-helloworld; fi
+  - npm install
+  - npm install -g mocha
   - mocha --reporter spec ./test/test-app.js
